@@ -1,0 +1,98 @@
+Spring Framework
+	1. What is framework?
+	2. What is Spring Framework?
+		Java based framework
+		a framework of framework
+		lightweight framework 
+	3. Why Spring Framework?
+	4. Spring Architecture
+	5. Spring Containers
+	6. Dependency Injection
+	7. Auto wiring
+	8. Collection mapping
+	9. Spring JDBC
+	10. AOP
+	11. Spring MVC
+	
+For creating basic Spring application 2 dependencies are required
+		1. Spring core
+		2. Spring context
+		
+		go to maven repository
+		search for these dependencies
+	
+
+1. Name 2 IoC Container in Spring	
+	Bean Factory
+	ApplicationContext
+	
+2. Name 2 ways of specifying DI	
+	Constructor Injection
+	Setter Injection
+	
+3. What type of applications we can develop using Spring?
+	Desktop Applications as well as Enterprise Applications
+	
+	
+Dependency Injection	
+	when 1 entity is dependent on another entity to complete its definition, we need
+	to inject required dependency
+	
+
+1. In beans.xml we have constructor injection specified and the class has setter methods 
+   and no constructor.
+	  Exception in thread "main" org.springframework.beans.factory.BeanCreationException: 
+	  Error creating bean with name 'student1' defined in class path resource [beans.xml]: 
+	  Could not resolve matching constructor on bean class [com.springdemo2.beans.Student] 
+	  hint: specify index/type/name arguments for simple parameters to avoid type 
+	  ambiguities)
+	  
+2. In beans.xml we have constructor injection specified and the class has setter methods 
+   and non parameterized constructor.
+	  Exception in thread "main" org.springframework.beans.factory.BeanCreationException: 
+	  Error creating bean with name 'student1' defined in class path resource [beans.xml]: 
+	  Could not resolve matching constructor on bean class [com.springdemo2.beans.Student] 
+	  hint: specify index/type/name arguments for simple parameters to avoid type 
+	  ambiguities)
+	  
+3. In beans.xml we have setter injection specified and the class has parameterized
+   constructor.
+	  Exception in thread "main" org.springframework.beans.factory.BeanCreationException: 
+	  Error creating bean with name 'addr1' defined in class path resource [beans.xml]: 
+	  Instantiation of bean failed; nested exception is 
+	  org.springframework.beans.BeanInstantiationException: 
+	  Failed to instantiate [com.springdemo2.beans.Address]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.springdemo2.beans.Address.<init>()
+   
+4. In beans.xml we have setter injection specified and the class has setter methods 
+   and non parameterized constructor.
+	  Exception in thread "main" org.springframework.beans.factory.BeanCreationException: 
+	  Error creating bean with name 'addr1' defined in class path resource [beans.xml]: 
+	  Error setting property values; nested exception is 
+	  org.springframework.beans.NotWritablePropertyException: Invalid property 'city' of 
+	  bean class [com.springdemo2.beans.Address]: Bean property 'city' is not writable or 
+	  has an invalid setter method. Does the parameter type of the setter match the 
+	  return type of the getter?
+   
+5. What if i have both setter methods and constructor in the class. which way of
+   dependency injection should be chosen?
+	if constructor injection is specified with matching constructor it will work fine 
+	without any error.
+	if parameterized constructor is in the class and mapping is setter injection then
+	object will not be created as non parameterized constructor is not found.
+	to resolve this a non parameterized constructor must be added to the class
+	then even if both setters and constructor are available the application will work fine.
+	
+
+Create following hierarchy in classes and map in the xml file
+	Address : city, pincode
+	Product : product id, product name, product cost
+	Order : order id, product (only 1)
+	Customer : customer id, customer name, address, order
+	
+	
+	
+	
+	
+	
+	
+	
