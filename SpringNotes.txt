@@ -89,8 +89,74 @@ Create following hierarchy in classes and map in the xml file
 	Order : order id, product (only 1)
 	Customer : customer id, customer name, address, order
 	
+Spring framework & Hibernate
+EJB 
+		Session beans - object creation, EE application development - Spring
+		Entity beans - objects to be stored in database - Hibernate
 	
+Spring JDBC
+
+1. Load the driver - Class.forName
+2. Establish connection with Database - DriverManager.getConnection()
+3. Execute queries
+4. Handle exceptions
+5. Close resources
+
+The repeated tasks of JDBC are taken care of by Spring framework.
+
+what will I do as a developer?
+	1. define connection parameters 
+	2. Specify SQL statement to be executed
 	
+Spring JDBC provides various approaches , classes, interfaces which will allow to work 
+with database	
+
+JdbcTemplate class 
+	belongs to org.springframework.dao package
+	it is threadsafe
+	what does it do?
+		1. executes the queries
+		2. executes stored procedures
+		3. update data
+		4. delete data
+		5. iteration over ResultSet
+		6. Catching of JDBC exception
+		
+	How to use this class?
+		Create a DataSource in configuration file
+		DataSource will have the details about the database.
+		This will be utilized by DAO classes 
+	
+create table employees(
+	empid int,
+	empname varchar(30),
+	designation varchar(20),
+	PRIMARY KEY(empid)
+)
+
+what is difference between @Component & @Bean
+@Component:
+	is class level annotation (a class will be annotated with @Component)
+	the class will be instantiated & dependencies will be injected
+	
+
+@Bean 
+	is method level annotation ( a method will be annotated)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	
