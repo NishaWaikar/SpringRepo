@@ -143,10 +143,89 @@ what is difference between @Component & @Bean
 @Bean 
 	is method level annotation ( a method will be annotated)
 
+Spring MVC
+	a design pattern for developing spring web based applications
+	M - Model - contains business logic
+	V - View - that is showcased to the end user
+	C - Controller - control the flow of application
+	
+Springboot
+	a submodule of spring
+	
+	speed up of development process where 80% of configuration is automated
+	makes it easy to develop stand alone production grade spring applications which can 
+	directly be executed
+	
+	provides easy and faster way to develop, configure & execute simple as well as 
+	web based applications
+	
+	
+	Spring Framework + embedded server - manual configuration = SpringBoot
+											less annotations
+											
+	convention over configuration 
+ if a developer follows the convention , configuration is taken care of by SpringBoot
 
+Advantages of SpringBoot:
+	Creates stand alone application that can be started using jar
+	Embedded servers like tomcat, jetty etc
+	Automatically configures spring and third party libraries whenever possible
+	
+How to create SpringBoot Project
+	1. Create a maven project & add starter dependencies
+	2. Use Spring Initialzr - start.spring.io
+	3. Use IDE like STS 
+	4. SpringBoot Command Line Interface
+	
+Spring: 
+Spring Framework is the most popular application development framework of Java. 
+The main feature of the Spring Framework is dependency Injection or Inversion of Control 
+(IoC). With the help of Spring Framework, we can develop a loosely coupled application. 
+It is better to use if application type or characteristics are purely defined.
 
+Spring Boot: 
+Spring Boot is a module of Spring Framework. It allows us to build a 
+stand-alone application with minimal or zero configurations. It is better to use if we 
+want to develop a simple Spring-based application or RESTful services.	
+	
+	
+	
+	
+	
+	
+Spring Boot: 
+Spring Boot makes it easy to quickly bootstrap and start developing a 
+Spring-based application. It avoids a lot of boilerplate code. It hides a lot of 
+complexity behind the scene so that the developer can quickly get started and develop 
+Spring-based applications easily.	
 
-
+Spring MVC: 
+Spring MVC is a Web MVC Framework for building web applications. It contains a lot of 
+configuration files for various capabilities. It is an HTTP oriented web application 
+development framework.
+	
+SpringBoot Architecture
+	layered architecture
+	4 layers
+	
+	Presentation layer
+		handles HTTP requests, JSON translations, Authentication, contains view
+	Business layer 
+		contains business logic, service classes, dao classes
+	Persistence layer 
+		contains storage logic (dto)
+	Database layer
+		CRUD operations 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
